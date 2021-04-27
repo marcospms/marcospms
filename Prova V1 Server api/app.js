@@ -12,7 +12,7 @@ app.get("/lancamentos", (req, res) => {
 app.get("/lancamentos/relatorio", (req, res) => {
     console.log("Requisição Get Relatório");
     
-    var valor1 = 10;
+    var valor1 = 12;
     var valor2 = 17;
     var valor3 = 20;
     var result = (valor1 + valor2 + valor3) / 3;
