@@ -8,6 +8,18 @@ app.get("/lancamentos", (req, res) => {
     console.log("Requisição Get realizada com Sucesso");
     res.status(200).json(["Paulo Osvaldo de Silva", false, 5, 84.00]);
 });
+
+app.get("/lancamentos/relatorio", (req, res) => {
+    console.log("Requisição Get Relatório");
+    
+    var valor1 = 10;
+    var valor2 = 17;
+    var valor3 = 20;
+    var result = (valor1 + valor2 + valor3) / 3;
+
+    res.send("A media das vendas é: " + result);
+});
+
 app.post("/lancamento", (req, res) => {
     console.log("Requisição Post realizada com Sucesso");
     console.log(req.body);
@@ -15,7 +27,6 @@ app.post("/lancamento", (req, res) => {
     console.log("Ativo: " + req.body.ativo);
     console.log("Parcelas: " + req.body.parcelas);
     console.log("Valor: " + req.body.valor);
-
 
     res.send("Mensagem Enviada - Post");
 });
@@ -29,9 +40,9 @@ app.put("/lancamento/:id", (req, res) => {
     console.log("Parcelas: " + req.body.parcelas);
     console.log("Valor: " + req.body.valor);
 
-
     res.send("Mensagem Enviada - Put");
 });
+
 app.delete("/lancamento/:id", (req, res) => {
     console.log("Requisição Delete realizada com Sucesso");
     console.log("O Lançamento com o código " + req.params.id + " Será Excluido");
