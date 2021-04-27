@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 
 app.get("/lancamentos", (req, res) => {
     console.log("Requisição Get realizada com Sucesso");
-    res.status(200).json(["Paulo Osvaldo da Silva", false, 5, 84.00]);
+    res.status(200).json(["Paulo Osvaldo de Silva", false, 5, 84.00]);
 });
 app.post("/lancamento", (req, res) => {
     console.log("Requisição Post realizada com Sucesso");
